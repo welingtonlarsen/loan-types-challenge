@@ -9,9 +9,9 @@
 The proposal of this Challenge is provide a person with the loan types suitable for her, given some variables:
 
 We must provide the following loan types:
-Personal Loan. Interest Rate: 4%
-Collateralized Loan. Interest Rate: 3%
-Payroll Loan. Interest Rate: 2%
+- Personal Loan. Interest Rate: 4%
+- Collateralized Loan. Interest Rate: 3%
+- Payroll Loan. Interest Rate: 2%
 
 Listed below are the business rules for conceding a loan based on the person's profile:
 
