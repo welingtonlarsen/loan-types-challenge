@@ -4,11 +4,9 @@
 
 </div>
 
-<div align="center">
-
 # Code Challenge
 
-The proposal of this Challenge is provide a person with the loan types suitable for her, given some variables:
+The assessment proposal which we'll develop together is provide a person with the loan types suitable for her, given some variables:
 
 We must provide the following loan types:
 Personal Loan. Interest Rate: 4%
@@ -26,6 +24,8 @@ Listed below are the business rules for conceding a loan based on the person's p
 - \* Clients under 30 y.o.
 - \*\* Clients residing in SP (São Paulo state code in Brazil)
 - \*\*\* Clients under 30 y.o. residing in SP
+
+<div align="center">
 
 ![](https://img.shields.io/badge/Autor-Welington%20Larsen-brightgreen)
 ![](https://img.shields.io/badge/Language-Java-brightgreen)
