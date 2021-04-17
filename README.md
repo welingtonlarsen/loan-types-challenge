@@ -2,9 +2,9 @@
 
 ![](https://img.shields.io/badge/Status-Under%20Development-orange)
 
-</div>
-
 # Code Challenge
+
+</div>
 
 The assessment proposal which we'll develop together is provide a person with the loan types suitable for her, given some variables:
 
