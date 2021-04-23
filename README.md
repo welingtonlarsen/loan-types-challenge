@@ -58,12 +58,27 @@ And must respond the following data:
 
 ```json
 {
-  "customer": "Erikaya",
-  "loans": [
-    {
-      "type": "personal",
-      "taxes": 1
-    }
+  "data": {
+    "customer": "Erikaya",
+    "loans": [
+      {
+        "type": "personal",
+        "taxes": 1
+      }
+    ]
+  },
+  "errorMessages": null
+}
+```
+
+When it's bad request, must respond the following data:
+
+```json
+{
+  "data": null,
+  "errorMessages": [
+    "location must not be blank",
+    "name must not be blank"
   ]
 }
 ```
@@ -72,7 +87,7 @@ And must respond the following data:
 
 - Install dependencies
 
-## Rode os testes
+## Run tests
 
 You may execute the following command via CLI:
 
