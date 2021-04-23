@@ -5,6 +5,7 @@ import com.loanchallenge.domain.loan.vo.CustomerVo;
 import com.loanchallenge.domain.loan.vo.LoanVo;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.Set;
 
 @Service
@@ -19,7 +20,7 @@ public class LoanRuleB implements LoanRule{
 
     @Override
     public boolean accept(CustomerVo request) {
-        return request.verifyIncomeIsMinorOrEqualsThan(3000)
+        return request.verifyIncomeIsMinorOrEqualsThan(new BigDecimal(3000))
                 && request.verifyIsFromSaoPaulo()
                 && !request.verifyAgeHigherThan(30);
     }

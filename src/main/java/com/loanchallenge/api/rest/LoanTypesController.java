@@ -1,6 +1,5 @@
 package com.loanchallenge.api.rest;
 
-import com.loanchallenge.domain.loan.enums.LoanType;
 import com.loanchallenge.domain.loan.service.LoanAnalyzerService;
 import com.loanchallenge.domain.loan.vo.CustomerWrapperVo;
 import com.loanchallenge.domain.loan.vo.LoanTypesSuitableVo;
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
-import java.util.HashSet;
 import java.util.Set;
 
 @RestController

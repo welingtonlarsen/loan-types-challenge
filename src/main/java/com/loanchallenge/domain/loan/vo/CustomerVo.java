@@ -49,16 +49,16 @@ public class CustomerVo {
         return income;
     }
 
-    public boolean verifyIncomeIsMinorOrEqualsThan(int value) {
-        return income.compareTo(new BigDecimal(value)) <= 0;
+    public boolean verifyIncomeIsMinorOrEqualsThan(BigDecimal value) {
+        return income.compareTo(value) <= 0;
     }
 
     public boolean verifyIsFromSaoPaulo() {
         return location.toLowerCase().equals("sp");
     }
 
-    public boolean verifyIncomeHigherThan(int value) {
-        return income.compareTo(new BigDecimal(value)) > 0;
+    public boolean verifyIncomeHigherThan(BigDecimal value) {
+        return income.compareTo(value) > 0;
     }
 
     public boolean verifyAgeHigherThan(int age) {
