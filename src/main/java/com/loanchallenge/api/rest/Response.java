@@ -18,12 +18,12 @@ public class Response<T> {
         return errorMessages;
     }
 
-    public ResponseEntity<Response<T>> getAsAccepted(T body) {
+    public ResponseEntity<Response<T>> asAccepted(T body) {
         data = body;
         return ResponseEntity.accepted().body(this);
     }
-    
-    public ResponseEntity<Response<T>> getAsBadRequest(BindingResult bindingResult) {
+
+    public ResponseEntity<Response<T>> asBadRequest(BindingResult bindingResult) {
         bindingResult.getAllErrors().forEach(error -> addErrorMessage(error.getDefaultMessage()));
         return ResponseEntity.badRequest().body(this);
     }

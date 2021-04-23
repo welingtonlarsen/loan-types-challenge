@@ -16,19 +16,20 @@ import java.util.Set;
 
 @RestController
 public class LoanTypesController {
-    @Autowired
-    private LoanAnalyzerService loanAnalyzerService;
+    @Autowired private LoanAnalyzerService loanAnalyzerService;
 
     @PostMapping(value = "/api/loanTypes")
-    public ResponseEntity<Response<LoanTypesSuitableVo>> fetchLoanTypes(@RequestBody @Valid CustomerWrapperVo customer, BindingResult bindingResult) {
-        Response response = new Response<LoanTypesSuitableVo>();
-        
+    public ResponseEntity<Response<LoanTypesSuitableVo>> fetchLoanTypes(
+            @RequestBody @Valid CustomerWrapperVo customer, BindingResult bindingResult) {
+        var response = new Response<LoanTypesSuitableVo>();
+
         if (bindingResult.hasErrors()) {
-            return response.getAsBadRequest(bindingResult);
+            return response.asBadRequest(bindingResult);
         }
+        Set<LoanVo> loanTypesSuitable =
+                loanAnalyzerService.fetchLoanTypesSuitable(customer.getCustomerVo());
 
-        Set<LoanVo> loanTypesSuitable = loanAnalyzerService.fetchLoanTypesSuitable(customer.getCustomerVo());
-
-        return response.getAsAccepted(new LoanTypesSuitableVo(customer.getCustomerVo().getName(), loanTypesSuitable));
+        return response.asAccepted(
+                new LoanTypesSuitableVo(customer.getCustomerVo().getName(), loanTypesSuitable));
     }
 }

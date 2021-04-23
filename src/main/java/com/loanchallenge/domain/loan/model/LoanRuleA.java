@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 import java.util.Set;
 
 @Service
-public class LoanRuleA implements LoanRule{
+public class LoanRuleA implements LoanRule {
     @Override
     public Set<LoanVo> possibilities(CustomerVo request) {
         return Set.of(new LoanVo(LoanType.PERSONAL, 4));
@@ -17,6 +17,7 @@ public class LoanRuleA implements LoanRule{
 
     @Override
     public boolean accept(CustomerVo request) {
-        return request.verifyIncomeIsMinorOrEqualsThan(new BigDecimal(3000)) && !request.verifyIsFromSaoPaulo();
+        return request.verifyIncomeIsMinorOrEqualsThan(new BigDecimal(3000))
+                && !request.verifyIsFromSaoPaulo();
     }
 }

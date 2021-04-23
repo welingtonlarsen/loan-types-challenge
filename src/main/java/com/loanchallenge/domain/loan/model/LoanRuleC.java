@@ -16,7 +16,7 @@ public class LoanRuleC implements LoanRule {
     @Override
     public boolean accept(CustomerVo request) {
         return request.verifyIncomeHigherThan(new BigDecimal(3000))
-                && request.verifyIncomeIsMinorOrEqualsThan(new BigDecimal(4999.99))
+                && request.verifyIncomeIsMinorOrEqualsThan(BigDecimal.valueOf(4999.99))
                 && !request.verifyIsFromSaoPaulo();
     }
 }

@@ -7,7 +7,7 @@ import com.loanchallenge.domain.loan.vo.LoanVo;
 import java.math.BigDecimal;
 import java.util.Set;
 
-public class LoanRuleD implements LoanRule{
+public class LoanRuleD implements LoanRule {
     @Override
     public Set<LoanVo> possibilities(CustomerVo request) {
         return Set.of(new LoanVo(LoanType.PERSONAL, 4), new LoanVo(LoanType.COLLATERALIZED, 3));
@@ -16,7 +16,7 @@ public class LoanRuleD implements LoanRule{
     @Override
     public boolean accept(CustomerVo request) {
         return request.verifyIncomeHigherThan(new BigDecimal(3000))
-                && request.verifyIncomeIsMinorOrEqualsThan(new BigDecimal(4999.99))
+                && request.verifyIncomeIsMinorOrEqualsThan(BigDecimal.valueOf(4999.99))
                 && request.verifyIsFromSaoPaulo();
     }
 }

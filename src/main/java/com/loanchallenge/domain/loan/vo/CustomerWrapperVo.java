@@ -13,9 +13,7 @@ public class CustomerWrapperVo {
         this.customerVo = customerVo;
     }
 
-    public CustomerWrapperVo() {
-
-    }
+    public CustomerWrapperVo() {}
 
     public CustomerVo getCustomerVo() {
         return customerVo;

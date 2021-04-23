@@ -10,17 +10,26 @@ import java.math.BigDecimal;
 public class CustomerVo {
     @NotBlank(message = "name must not be blank")
     private String name;
+
     @NotBlank(message = "cpf must not be blank")
     @CPF(message = "cpf invalid")
     private String cpf;
+
     @Positive(message = "age must be greater than 0")
     private int age;
+
     @NotBlank(message = "location must not be blank")
     private String location;
+
     @NotNull(message = "income must not be null")
     private BigDecimal income;
 
-    public CustomerVo(@NotBlank String name, @NotBlank @CPF String cpf, @Positive int age, @NotBlank String location, @Positive @NotNull BigDecimal income) {
+    public CustomerVo(
+            @NotBlank String name,
+            @NotBlank @CPF String cpf,
+            @Positive int age,
+            @NotBlank String location,
+            @Positive @NotNull BigDecimal income) {
         super();
         this.name = name;
         this.cpf = cpf;
@@ -54,7 +63,7 @@ public class CustomerVo {
     }
 
     public boolean verifyIsFromSaoPaulo() {
-        return location.toLowerCase().equals("sp");
+        return location.equalsIgnoreCase("sp");
     }
 
     public boolean verifyIncomeHigherThan(BigDecimal value) {

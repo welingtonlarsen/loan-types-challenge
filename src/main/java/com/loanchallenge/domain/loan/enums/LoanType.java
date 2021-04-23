@@ -1,7 +1,9 @@
 package com.loanchallenge.domain.loan.enums;
 
 public enum LoanType {
-    PERSONAL("personal"), COLLATERALIZED("collateralized"), PAYROLL("payroll");
+    PERSONAL("personal"),
+    COLLATERALIZED("collateralized"),
+    PAYROLL("payroll");
 
     private final String fieldDescription;
 

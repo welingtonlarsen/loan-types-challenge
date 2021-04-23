@@ -9,13 +9,10 @@ import java.math.BigDecimal;
 import java.util.Set;
 
 @Service
-public class LoanRuleB implements LoanRule{
+public class LoanRuleB implements LoanRule {
     @Override
     public Set<LoanVo> possibilities(CustomerVo request) {
-        return Set.of(
-                new LoanVo(LoanType.PERSONAL, 4),
-                new LoanVo(LoanType.COLLATERALIZED,
-                        3));
+        return Set.of(new LoanVo(LoanType.PERSONAL, 4), new LoanVo(LoanType.COLLATERALIZED, 3));
     }
 
     @Override

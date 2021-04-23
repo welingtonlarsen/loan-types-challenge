@@ -7,6 +7,7 @@ import javax.validation.Valid;
 import java.util.Set;
 
 public interface LoanRule {
-    public Set<LoanVo> possibilities(CustomerVo request);
+    Set<LoanVo> possibilities(CustomerVo request);
+
     boolean accept(@Valid CustomerVo request);
 }
