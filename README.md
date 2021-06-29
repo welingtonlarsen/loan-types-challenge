@@ -6,7 +6,7 @@
 
 </div>
 
-The proposal of this Challenge is provide a person with the loan types suitable for her, given some variables:
+The proposal of this study challenge is provide a person with the loan types suitable for her, given some variables:
 
 We must provide the following loan types:
 - Personal Loan. Interest Rate: 4%
