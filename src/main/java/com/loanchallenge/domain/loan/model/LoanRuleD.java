@@ -3,10 +3,12 @@ package com.loanchallenge.domain.loan.model;
 import com.loanchallenge.domain.loan.enums.LoanType;
 import com.loanchallenge.domain.loan.vo.CustomerVo;
 import com.loanchallenge.domain.loan.vo.LoanVo;
+import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.util.Set;
 
+@Service
 public class LoanRuleD implements LoanRule {
     @Override
     public Set<LoanVo> possibilities(CustomerVo request) {

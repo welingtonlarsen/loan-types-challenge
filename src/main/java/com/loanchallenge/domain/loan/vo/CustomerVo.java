@@ -10,17 +10,13 @@ import java.math.BigDecimal;
 public class CustomerVo {
     @NotBlank(message = "name must not be blank")
     private String name;
-
     @NotBlank(message = "cpf must not be blank")
     @CPF(message = "cpf invalid")
     private String cpf;
-
     @Positive(message = "age must be greater than 0")
     private int age;
-
     @NotBlank(message = "location must not be blank")
     private String location;
-
     @NotNull(message = "income must not be null")
     private BigDecimal income;
 

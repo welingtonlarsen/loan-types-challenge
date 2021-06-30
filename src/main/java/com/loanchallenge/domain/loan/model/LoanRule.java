@@ -8,6 +8,5 @@ import java.util.Set;
 
 public interface LoanRule {
     Set<LoanVo> possibilities(CustomerVo request);
-
     boolean accept(@Valid CustomerVo request);
 }

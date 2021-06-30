@@ -18,6 +18,6 @@ public class LoanRuleA implements LoanRule {
     @Override
     public boolean accept(CustomerVo request) {
         return request.verifyIncomeIsMinorOrEqualsThan(new BigDecimal(3000))
-                && !request.verifyIsFromSaoPaulo();
+                && (!request.verifyIsFromSaoPaulo() || request.verifyAgeHigherThan(29));
     }
 }

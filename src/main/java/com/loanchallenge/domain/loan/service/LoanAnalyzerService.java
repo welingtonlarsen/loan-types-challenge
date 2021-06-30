@@ -20,7 +20,7 @@ public class LoanAnalyzerService {
                         .filter(loanRule -> loanRule.accept(customerVo))
                         .collect(Collectors.toSet());
 
-        if (loanRulesAccepted.isEmpty() || loanRulesAccepted.size() != 1) {
+        if (loanRulesAccepted.size() != 1) {
             return Set.of();
         }
 
