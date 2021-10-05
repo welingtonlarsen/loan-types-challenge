@@ -1,6 +1,6 @@
 <div align="center">
 
-![](https://img.shields.io/badge/Status-Under%20Development-orange)
+![](https://img.shields.io/badge/Status-Done-brightgreen)
 
 # Code Challenge
 
